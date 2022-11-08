@@ -4,3 +4,7 @@ nodejs/node_modules
 # cd nodejs/proto
 # buf generate (needs to be installed)
 nodejs/src/proto
+
+
+# generated with yarn pbjs:build && yarn pbts:build
+nodejs/src/pbjs

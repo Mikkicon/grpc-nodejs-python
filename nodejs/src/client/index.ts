@@ -8,7 +8,7 @@ import { GreetRequest } from '../proto/service/hello/v1/hello_service_pb';
 import PBGeneratedValidators from '../pbjs/bundle';
 
 async function main() {
-  const configFilePath = path.join(__dirname, '..', 'config.json');
+  const configFilePath = path.join(__dirname, '..', '..', '..', 'config.json');
   const config = await getProtoValidatedConfig(configFilePath);
   const { address, port } = config;
   const socket = address + ':' + port;

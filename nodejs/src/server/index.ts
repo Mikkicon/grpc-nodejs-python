@@ -32,7 +32,7 @@ async function main() {
   const server = new Server();
   server.addService(HelloServiceService, { greet });
 
-  const configFilePath = path.join(__dirname, '..', 'config.json');
+  const configFilePath = path.join(__dirname, '..', '..', '..', 'config.json');
   const config = await getProtoValidatedConfig(configFilePath);
 
   const { address, port } = config;
