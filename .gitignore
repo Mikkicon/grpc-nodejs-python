@@ -1,9 +1,10 @@
 nodejs/node_modules
 
 # generated with 
-# cd nodejs/proto
+# cd proto
 # buf generate (needs to be installed)
 nodejs/src/proto
+python/src/proto
 
 
 # generated with yarn pbjs:build && yarn pbts:build

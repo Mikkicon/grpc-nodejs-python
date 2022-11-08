@@ -10,3 +10,5 @@ plugins:
   - name: ts
     out: ../nodejs/src/proto
     opt: grpc_js
+  - name: python
+    out: ../python/src/proto
