@@ -1,0 +1,6 @@
+nodejs/node_modules
+
+# generated with 
+# cd nodejs/proto
+# buf generate (needs to be installed)
+nodejs/src/proto

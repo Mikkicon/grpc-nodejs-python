@@ -1,0 +1,9 @@
+
+syntax = "proto3";
+
+package com.utils.v1;
+
+message Config {
+  optional string address = 1;
+  optional string port = 2;
+}
