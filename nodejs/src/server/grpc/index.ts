@@ -3,10 +3,10 @@ import { sendUnaryData, ServerUnaryCall } from '@grpc/grpc-js/build/src/server-c
 import path from 'path';
 import fs from 'fs/promises';
 
-// import { Language } from '../proto/com/language/v1/language_pb';
-import { HelloServiceService } from '../proto/service/hello/v1/hello_service_grpc_pb';
-import { GreetRequest, GreetResponse } from '../proto/service/hello/v1/hello_service_pb';
-import PBGeneratedValidators from '../pbjs/bundle';
+// import { Language } from '../../proto/com/language/v1/language_pb';
+import { HelloServiceService } from '../../proto/service/hello/v1/hello_service_grpc_pb';
+import { GreetRequest, GreetResponse } from '../../proto/service/hello/v1/hello_service_pb';
+import PBGeneratedValidators from '../../pbjs/bundle';
 
 const greet = async (call: ServerUnaryCall<GreetRequest, GreetResponse>, callback: sendUnaryData<GreetResponse>) => {
   const { CODE_EN, CODE_UA, CODE_UNSPECIFIED } = PBGeneratedValidators.com.language.v1.Language.Code;
@@ -32,7 +32,7 @@ async function main() {
   const server = new Server();
   server.addService(HelloServiceService, { greet });
 
-  const configFilePath = path.join(__dirname, '..', '..', '..', 'config.json');
+  const configFilePath = path.join(__dirname, '..', '..', '..', '..', 'config.json');
   const config = await getProtoValidatedConfig(configFilePath);
 
   const { address, port } = config;

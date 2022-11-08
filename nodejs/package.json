@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon",
     "dev:server": "nodemon src/server/index.ts --watch /src/server/*",
     "dev:client": "nodemon src/client/index.ts --watch /src/client/*",
     "pbjs:find": "find . -type f -name '*.proto' -not -path './node_modules/*'",

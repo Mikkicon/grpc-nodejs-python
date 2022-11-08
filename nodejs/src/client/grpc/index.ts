@@ -2,13 +2,13 @@ import { credentials } from '@grpc/grpc-js';
 import fs from 'fs/promises';
 import path from 'path';
 
-import { Language } from '../proto/com/language/v1/language_pb';
-import { HelloServiceClient } from '../proto/service/hello/v1/hello_service_grpc_pb';
-import { GreetRequest } from '../proto/service/hello/v1/hello_service_pb';
-import PBGeneratedValidators from '../pbjs/bundle';
+import { Language } from '../../proto/com/language/v1/language_pb';
+import { HelloServiceClient } from '../../proto/service/hello/v1/hello_service_grpc_pb';
+import { GreetRequest } from '../../proto/service/hello/v1/hello_service_pb';
+import PBGeneratedValidators from '../../pbjs/bundle';
 
 async function main() {
-  const configFilePath = path.join(__dirname, '..', '..', '..', 'config.json');
+  const configFilePath = path.join(__dirname, '..', '..', '..', '..', 'config.json');
   const config = await getProtoValidatedConfig(configFilePath);
   const { address, port } = config;
   const socket = address + ':' + port;
